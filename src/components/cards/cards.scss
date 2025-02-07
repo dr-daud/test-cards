@@ -15,7 +15,8 @@
 
         img {
             max-width: 200px;
-            height: auto;
+            height: 195px;
+            object-fit: cover;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
@@ -30,11 +31,16 @@
             .title {
                 text-align: center;
                 font-size: 20px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 420px;
             }
 
             .desr {
                 margin-top: 20px;
                 height: 50px;
+                max-width: 420px;
             }
 
         }
@@ -151,5 +157,30 @@
         }
     }
 
+    .title-input,
+    .img-input {
+        white-space: nowrap;
+        /* Не переносить текст */
+        overflow: hidden;
+        /* Скрыть всё, что не помещается */
+        text-overflow: ellipsis;
+        /* Добавить "..." */
+        width: 200px;
+        display: block;
+        margin: 10px auto 10px auto;
+        padding: 12px 10px;
+        border-radius: 10px;
+    }
+
+    .descr-text {
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+        padding: 12px 10px;
+        resize: none;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+    }
 
 }
