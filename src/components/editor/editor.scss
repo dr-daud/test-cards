@@ -1,0 +1,22 @@
+.title-input,
+.img-input {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+    display: block;
+    margin: 10px auto 10px auto;
+    padding: 12px 10px;
+    border-radius: 10px;
+}
+
+.descr-text {
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    padding: 12px 10px;
+    resize: none;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+}
