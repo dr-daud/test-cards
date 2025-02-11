@@ -7,18 +7,31 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    img {
-        max-width: 200px;
-        height: 195px;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
+    .photo-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        background: #f0f0f0;
         margin-right: 30px;
+        border-radius: 5px;
     }
 
-    img:hover {
+    .photo {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        transition: 0.3s ease-in-out transform, 0.3s ease-in-out opacity;
+        border-radius: 5px;
+    }
+
+    .photo:hover {
         transform: translateY(-10px);
+    }
+
+    .hidden {
+        opacity: 0;
     }
 
     .flex-wrap {

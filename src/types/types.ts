@@ -8,30 +8,33 @@ export interface ICards {
     photo: string
 }
 
+export interface IEditorState {
+    active: boolean;
+    id: number | null;
+    title: string;
+    description: string;
+    photo: string;
+}
+
+export interface IModalState {
+    active: boolean;
+    id: number | null;
+}
+
 export interface ICardProps {
     item: ICards;
-    setActiveEditor: React.Dispatch<React.SetStateAction<boolean>>;
-    setSelectedId: React.Dispatch<React.SetStateAction<number | null>>;
-    setTitleText: React.Dispatch<React.SetStateAction<string>>;
-    setDescrText: React.Dispatch<React.SetStateAction<string>>;
-    setImgLink: React.Dispatch<React.SetStateAction<string>>;
-    setActiveModal: React.Dispatch<React.SetStateAction<boolean>>;
+    setModal: React.Dispatch<React.SetStateAction<IModalState>>;
+    setEditor: React.Dispatch<React.SetStateAction<IEditorState>>;
 }
 
 export interface IModalProps {
-    setActiveModal: React.Dispatch<React.SetStateAction<boolean>>;
-    selectedId: number | null;
+    modal: IModalState;
+    setModal: React.Dispatch<React.SetStateAction<IModalState>>;
     deleteCard: (id: number | null) => void;
 }
 
 export interface IEditorProps {
-    setActiveEditor: React.Dispatch<React.SetStateAction<boolean>>;
-    imgLink: string;
-    setImgLink: React.Dispatch<React.SetStateAction<string>>;
-    titleText: string;
-    setTitleText: React.Dispatch<React.SetStateAction<string>>;
-    descrText: string;
-    setDescrText: React.Dispatch<React.SetStateAction<string>>;
+    editor: IEditorState;
+    setEditor: React.Dispatch<React.SetStateAction<IEditorState>>;
     editCard: (id: number | null) => void;
-    selectedId: number | null;
 }
